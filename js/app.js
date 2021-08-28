@@ -5,17 +5,23 @@ game()
 
 $('.option').on('click', guess)
 
+$('.close a').on('click', function() {
+    $('.result').hide()
+    $('.option').removeClass('scale')
+    game()
+})
+
 function guess(){
+    $(this).addClass('scale')
     let index = $('.option').index(this)
     if(index === correct){
-        alert('Muy bien!!!!!!!!!!!!!!')
+        $('.result.won').show()
         score++
     }else{
-        alert('Intentalo de nuevo')
+        $('.result.lost').show()
         score = 0
     }
     $('.score span').text(score)
-    game()
 }
 
 function game(){
@@ -28,8 +34,6 @@ function game(){
         }
     })
 }
-
-
 
 function generateColor(){
     return 'rgb(' + random() + ', ' + random() + ', ' + random() + ')'

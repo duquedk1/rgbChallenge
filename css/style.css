@@ -7,8 +7,29 @@ body{
 
 header{
     width: 100vw;
-    height: 30vh;
-    background-color:#238;
+    height: 14vh;
+    background-color:#4076A4;
+}
+header h3, h1{
+    margin: auto;
+}
+header h1{
+    font-weight: 400;  
+}
+
+.score{
+    margin-top: 10px;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.question{
+    font-size: 28px;
+}
+
+.question-container{
+    position: absolute;
+    top: 40%;
+    width: 100%;
 }
 
 .option{
@@ -18,4 +39,35 @@ header{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    margin: 20px 15px;
+    transition: all 0.45s ease;
+}
+
+.option.scale{
+    transform: scale(46);
+}
+
+.result {
+    display: none;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+.result span{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.result .close{
+    margin-top: 70px;
+}
+
+.result .close a{
+    color: #fff;
+    font-size: 21px;
+    text-decoration: none;
+    border: 5px solid #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
